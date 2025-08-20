@@ -9,39 +9,58 @@ This repo will store my progress throughout the semester, including assignments,
 
 ### 1. Build the Docker Image
 
-Use the following command to build docker image:
+Build the image (from the repo root, where the Dockerfile and docker-compose.yml are located):
 
 ```bash
-docker build -t cs5324 .
+docker compose build
 ```
 
 
 ### 2. Start The Container
 
-Use the following command to start the container:
+Start Jupyter with:
 
 ```bash
-docker run --rm -it -p 8888:8888 -v "$PWD":/workspace cs5324
+docker compose up
+```
+
+This will:
+
+- Map port 8888 in the container to localhost:8888
+- Mount your project repo (cs5324/) into /workspace inside the container
+- Start Jupyter Notebook with `/workspace` as its root, so you’ll see:
+
+```bash
+assignments/
+projects/
+notes/
+datasets/
 ```
 
 
 ### 3. Accessing The Notebook
 
-Open the link `http://127.0.0.1:8888/?token=...` in a browser. This opens the frontend of the jupyter server created by the container. You can now simply use jupyter notebooks as if it ran on your own machine.
+After startup, the terminal will print a URL like: `http://127.0.0.1:8888/?token=...`.
+
+Open it in your browser. You can now create and run your notebooks.
 
 
 ### 4. Stopping The Container
 
-There are two ways of stopping the containter.
-- Hit `ctrl + c` in the terminal window that has the jupyter logs
-- Or in a new terminal window, run
-  - `docker ps`
-  - `docker stop <id>`
+To stop Jupyter:
 
-To restart the container, just re-run the following command
+- Hit `ctrl + c` in the terminal running `docker compose up`, then run: 
+  - `docker compose down`
+
+
+### 5. Restarting The Container
+To restart the container, just run the following command:
+
+```bash
+docker compose up
 ```
-docker run --rm -it -p 8888:8888 -v "$PWD":/workspace cs5324
-```
+
+The notebooks, data, and code are stored on your host machine (cs5324/) and will persist between runs.
 
 
 ----

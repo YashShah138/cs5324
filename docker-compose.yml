@@ -1,0 +1,12 @@
+services:
+  notebook:
+    image: cs5324
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    command: >
+      jupyter notebook --ip=0.0.0.0 --no-browser
+      --allow-root --NotebookApp.notebook_dir=/workspace
