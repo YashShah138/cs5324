@@ -15,7 +15,6 @@ Build the image (from the repo root, where the Dockerfile and docker-compose.yml
 docker compose build
 ```
 
-
 ### 2. Start The Container
 
 Start Jupyter with:
@@ -37,23 +36,21 @@ notes/
 datasets/
 ```
 
-
 ### 3. Accessing The Notebook
 
 After startup, the terminal will print a URL like: `http://127.0.0.1:8888/?token=...`.
 
 Open it in your browser. You can now create and run your notebooks.
 
-
 ### 4. Stopping The Container
 
 To stop Jupyter:
 
-- Hit `ctrl + c` in the terminal running `docker compose up`, then run: 
+- Hit `ctrl + c` in the terminal running `docker compose up`, then run:
   - `docker compose down`
 
-
 ### 5. Restarting The Container
+
 To restart the container, just run the following command:
 
 ```bash
@@ -62,11 +59,9 @@ docker compose up
 
 The notebooks, data, and code are stored on your host machine (cs5324/) and will persist between runs.
 
+---
 
-----
-
-
-## Repository Structure  
+## Repository Structure
 
 ```bash
 CS5324-Machine-Learning/
@@ -92,4 +87,3 @@ CS5324-Machine-Learning/
 - Language: Python3
 - Libraries: NumPy, Pandas, Matplotlib, Scikit-Learn, Seaborn, TensorFlow
 - Tools: Jupyter Notebook, Docker, Github
-
