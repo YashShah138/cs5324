@@ -32,6 +32,16 @@ Open the link `http://127.0.0.1:8888/?token=...` in a browser. This opens the fr
 
 ### 4. Stopping The Container
 
+There are two ways of stopping the containter.
+- Hit `ctrl + c` in the terminal window that has the jupyter logs
+- Or in a new terminal window, run
+  - `docker ps`
+  - `docker stop <id>`
+
+To restart the container, just re-run the following command
+```
+docker run --rm -it -p 8888:8888 -v "$PWD":/workspace cs5324
+```
 
 
 ----
