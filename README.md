@@ -46,6 +46,7 @@ docker run --rm -it -p 8888:8888 -v "$PWD":/workspace cs5324
 
 ----
 
+
 ## Repository Structure  
 
 ```bash
@@ -59,13 +60,13 @@ CS5324-Machine-Learning/
 
 ## Topics Covered
 
-- Table Data & Visualization
-- Dimensionality & Images
-- Linear Classification
-- Basic Neural Networks
-- Deep Learning Basics
-- Convolutional Neural Networks
-- Sequential Networks
+1. Table Data & Visualization
+2. Dimensionality & Images
+3. Linear Classification
+4. Basic Neural Networks
+5. Deep Learning Basics
+6. Convolutional Neural Networks
+7. Sequential Networks
 
 ## Tech Stack
 
