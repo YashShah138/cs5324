@@ -6,3 +6,9 @@
 .envrc
 .venv
 env/
+
+.DS_Store
+
+*.trashinfo
+
+.Trash-O
