@@ -7,10 +7,15 @@
 .venv
 env/
 
+# Extraneous files
 .DS_Store
-
 *.trashinfo
-
 .Trash-O
 
+# Build files
 *.html
+
+# Dataset files
+*.jpg
+numberbatch-en.txt
+WELFake_Dataset.csv
